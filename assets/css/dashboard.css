@@ -1,0 +1,1115 @@
+/* ====================================================================
+   PETCARE - DASHBOARD & PORTAL STYLES
+   Sidebar, Overview, Pets, Records, Vaccines, Appointments, Reminders
+   ==================================================================== */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F8FAFC;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background-color: #FFFFFF;
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.sidebar-brand-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.15;
+}
+
+.sidebar-brand-sub {
+  font-size: 0.72rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.sidebar-nav {
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.sidebar-item:hover {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.sidebar-item.active {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(23, 105, 232, 0.25);
+}
+
+.sidebar-item.active .sidebar-icon {
+  color: #FFFFFF;
+}
+
+.sidebar-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.sidebar-item:hover .sidebar-icon {
+  color: var(--primary);
+}
+
+.sidebar-footer {
+  padding: 16px 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sidebar-logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--danger);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sidebar-logout-btn:hover {
+  background-color: var(--danger-bg);
+}
+
+/* Main Content Area */
+.dashboard-main {
+  margin-left: 260px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Topbar */
+.dashboard-topbar {
+  height: 72px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mobile-sidebar-toggle {
+  display: none;
+  font-size: 1.4rem;
+  color: var(--text-main);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.topbar-search {
+  position: relative;
+  width: 320px;
+}
+
+.topbar-search input {
+  width: 100%;
+  padding: 8px 14px 8px 36px;
+  font-size: 0.885rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  background-color: var(--bg-page);
+  outline: none;
+}
+
+.topbar-search input:focus {
+  border-color: var(--primary);
+  background-color: #FFFFFF;
+}
+
+.topbar-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.notif-bell-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.notif-bell-btn:hover {
+  color: var(--primary);
+  background-color: var(--primary-light);
+}
+
+.notif-badge-count {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--danger);
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+}
+
+.user-profile-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 12px 4px 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.user-profile-pill:hover {
+  border-color: var(--primary-200);
+}
+
+.user-avatar-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-100);
+}
+
+.user-pill-name {
+  font-size: 0.885rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Dashboard Body Content */
+.dashboard-content {
+  padding: 32px;
+  flex-grow: 1;
+}
+
+.view-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.view-header-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.view-header-subtitle {
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Stat Cards (Mockup 9) */
+.stat-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-200);
+}
+
+.stat-icon-wrap {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.stat-number {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* 2-Column Overview Section */
+.overview-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.panel-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.panel-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.panel-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Vaccine List Item */
+.upcoming-vaccine-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  margin-bottom: 12px;
+  transition: var(--transition);
+}
+
+.upcoming-vaccine-item:hover {
+  background-color: #F8FAFD;
+  border-color: var(--primary-200);
+}
+
+.vaccine-item-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.vaccine-pet-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-100);
+}
+
+.vaccine-item-info h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.vaccine-item-info p {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+}
+
+/* Timeline Activity Items */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 14px;
+  position: relative;
+}
+
+.timeline-icon-wrap {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.timeline-content h5 {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.timeline-content p {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ====================================================================
+   PET PROFILE & CRUD (Mockup 5)
+   ==================================================================== */
+.pet-profile-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.pet-profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.pet-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-200);
+}
+
+.pet-main-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.pet-name-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.pet-name-line h3 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.pet-specs-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pet-profile-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border-color);
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.pet-tab-btn {
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.pet-tab-btn.active {
+  color: var(--primary);
+}
+
+.pet-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: var(--radius-full);
+}
+
+.pet-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.pet-info-group-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pet-info-row {
+  margin-bottom: 12px;
+}
+
+.pet-info-label {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.pet-info-value {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Pets Cards Grid */
+.pets-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.pet-single-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-single-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-200);
+  box-shadow: var(--shadow-md);
+}
+
+.pet-card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.pet-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ====================================================================
+   REKAM MEDIS (Mockup 6)
+   ==================================================================== */
+.filter-bar-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  padding: 8px 14px;
+  font-size: 0.885rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: #FFFFFF;
+  color: var(--text-main);
+  outline: none;
+}
+
+.filter-select:focus {
+  border-color: var(--primary);
+}
+
+/* ====================================================================
+   JADWAL VAKSINASI (Mockup 7)
+   ==================================================================== */
+.vaccine-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+/* Calendar Card */
+.calendar-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.calendar-month-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.calendar-nav-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.calendar-nav-btn:hover {
+  color: var(--primary);
+  background-color: var(--primary-light);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+
+.calendar-day-label {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding: 6px 0;
+}
+
+.calendar-date-cell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.885rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+}
+
+.calendar-date-cell:hover {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.calendar-date-cell.other-month {
+  color: var(--text-light);
+  opacity: 0.4;
+}
+
+.calendar-date-cell.active-date {
+  background-color: var(--primary);
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+
+.calendar-date-cell.has-event::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.calendar-date-cell.active-date.has-event::after {
+  background-color: #FFFFFF;
+}
+
+/* ====================================================================
+   BUAT JANJI TEMU WIZARD (Mockup 4)
+   ==================================================================== */
+.booking-wizard-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 32px;
+}
+
+.wizard-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 36px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stepper-line {
+  position: absolute;
+  top: 16px;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
+.stepper-item {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepper-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.885rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.stepper-item.active .stepper-circle {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.stepper-item.completed .stepper-circle {
+  border-color: var(--primary);
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.stepper-label {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.stepper-item.active .stepper-label {
+  color: var(--primary);
+}
+
+/* Service Options Grid */
+.service-select-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.service-select-card {
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 18px 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-select-card:hover {
+  border-color: var(--primary-200);
+  background-color: var(--primary-light);
+}
+
+.service-select-card.selected {
+  border-color: var(--primary);
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.service-select-card.selected h5 {
+  color: var(--primary);
+}
+
+.service-select-icon {
+  font-size: 1.5rem;
+}
+
+.service-select-card h5 {
+  font-size: 0.885rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Time Slots */
+.time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.time-slot-btn {
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.time-slot-btn:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: var(--primary-light);
+}
+
+.time-slot-btn.selected {
+  background-color: var(--primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary) !important;
+}
+
+.time-slot-btn:disabled {
+  background-color: #F1F5F9;
+  color: var(--text-light);
+  cursor: not-allowed;
+  border-color: #E2E8F0;
+  text-decoration: line-through;
+}
+
+/* Responsive Dashboard */
+@media (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+  .dashboard-main {
+    margin-left: 0;
+  }
+  .mobile-sidebar-toggle {
+    display: block;
+  }
+  .stat-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .overview-two-col, .vaccine-layout-grid, .pet-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-select-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-topbar {
+    padding: 0 16px;
+  }
+  .topbar-search {
+    display: none;
+  }
+  .dashboard-content {
+    padding: 20px 16px;
+  }
+  .stat-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-select-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====================================================================
+   ADMIN APPOINTMENT DESK & ROLE MANAGEMENT
+   ==================================================================== */
+.admin-mode-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.775rem;
+  font-weight: 700;
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.admin-mode-pill:hover {
+  background-color: #FDE68A;
+}
+
+.admin-mode-pill.active-vet {
+  background-color: #DCFCE7;
+  color: #15803D;
+  border-color: #86EFAC;
+}
+
+.badge-pending-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--danger);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  margin-left: auto;
+}
+
+.admin-tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.admin-tab-btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.885rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-tab-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.admin-tab-btn.active {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(23, 105, 232, 0.25);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #FFFFFF;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1EBE5D;
+  color: #FFFFFF;
+}
+
+.admin-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.admin-stat-box {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-xs);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-stat-number {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.admin-stat-title {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.admin-schedule-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.admin-slot-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.admin-slot-card.is-pending {
+  border-left: 5px solid var(--warning);
+  background: #FFFDF8;
+}
+
+.admin-slot-card.is-confirmed {
+  border-left: 5px solid var(--success);
+}
+
+.admin-slot-card.is-cancelled {
+  border-left: 5px solid var(--danger);
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .admin-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

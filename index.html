@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PETCARE | Dokter Hewan Kota Cirebon</title>
+  <meta name="description" content="Layanan klinik dokter hewan terpercaya di Kota Cirebon. Fokus rekam kesehatan hewan modern, jadwal vaksinasi, dan janji temu hewan kesayangan.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core & Modules CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/public.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+  <!-- ====================================================================
+       1. PUBLIC LAYOUT
+       ==================================================================== -->
+  <div id="publicLayout">
+    <!-- Navbar (Mockup 1-3) -->
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar">
+          <!-- Brand Logo -->
+          <div class="brand-logo" data-navigate="home">
+            <div class="brand-icon-box">
+              <img src="assets/images/logo.svg" alt="PETCARE Logo" width="38" height="38">
+            </div>
+            <div class="brand-text-wrap">
+              <span class="brand-name">PETCARE</span>
+              <span class="brand-sub">Dokter Hewan Kota Cirebon</span>
+            </div>
+          </div>
+
+          <!-- Nav Items -->
+          <ul class="nav-links">
+            <li><a class="nav-link active" data-navigate="home">Beranda</a></li>
+            <li><a class="nav-link" data-navigate="about">Tentang Kami</a></li>
+            <li><a class="nav-link" data-navigate="services">Layanan</a></li>
+            <li><a class="nav-link" data-navigate="schedule">Jadwal</a></li>
+            <li><a class="nav-link" data-navigate="contact">Kontak</a></li>
+          </ul>
+
+          <!-- Right Actions -->
+          <div class="nav-actions">
+            <button class="nav-search-btn" title="Pencarian Cepat">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <button id="navAuthBtn" class="btn btn-primary btn-sm" data-navigate="login">
+              Login / Daftar
+            </button>
+            <button class="mobile-menu-toggle" id="publicMobileToggle" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open');">
+              ☰
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- VIEW A: BERANDA (Mockup 1) -->
+    <section id="view-home" class="public-view-section">
+      <!-- Hero -->
+      <div class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                Klinik Dokter Hewan Terpercaya Kota Cirebon
+              </div>
+              <h1 class="hero-title">
+                PETCARE
+                <span class="subtitle-loc">Dokter Hewan Kota Cirebon</span>
+              </h1>
+              <p class="hero-desc">
+                Pelayanan kesehatan hewan yang profesional, penuh kasih, dan terpercaya untuk sahabat kesayangan Anda.
+              </p>
+              <div class="hero-buttons">
+                <button class="btn btn-primary btn-lg" onclick="App.navigateTo('appointments')">
+                  Buat Janji Sekarang
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="btn btn-secondary btn-lg" data-navigate="services">
+                  Lihat Layanan
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Hero Image with Dog & Cat -->
+            <div class="hero-image-wrap">
+              <div class="hero-image-card">
+                <img src="assets/images/hero-pets.jpg" alt="Sahabat Berbulu PETCARE" onerror="this.src='assets/images/login-pets.jpg'">
+                <div class="hero-floating-badge">
+                  <span>🐾</span> Healthy Pets, Happy Lives
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Keunggulan Highlight Pills below Hero -->
+          <div class="hero-features-bar">
+            <div class="feature-pill-card">
+              <div class="feature-pill-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+              <div class="feature-pill-text">Dokter Berpengalaman & Profesional</div>
+            </div>
+            <div class="feature-pill-card">
+              <div class="feature-pill-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              </div>
+              <div class="feature-pill-text">Fasilitas Lengkap dan Modern</div>
+            </div>
+            <div class="feature-pill-card">
+              <div class="feature-pill-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </div>
+              <div class="feature-pill-text">Pelayanan Ramah untuk Hewan Kesayangan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Layanan Teaser on Homepage -->
+      <div class="services-section" style="padding-top: 50px;">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Layanan Unggulan</span>
+            <h2 class="section-title">Perawatan Holistik untuk Sahabat Anda</h2>
+            <p class="section-subtitle">Dukungan medis terbaik mulai dari vaksinasi rutin, pemeriksaan kesehatan, hingga tindakan bedah terencana.</p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon-wrap">🩺</div>
+              <h3 class="service-title">Pemeriksaan Umum</h3>
+              <p class="service-desc">Pemeriksaan kesehatan menyeluruh untuk hewan kesayangan Anda.</p>
+              <button class="btn btn-secondary service-btn" onclick="PublicModule.openServiceModal('pemeriksaan-umum')">Detail Layanan</button>
+            </div>
+            <div class="service-card">
+              <div class="service-icon-wrap">💉</div>
+              <h3 class="service-title">Vaksinasi</h3>
+              <p class="service-desc">Melindungi dari penyakit berbahaya dengan vaksinasi rutin.</p>
+              <button class="btn btn-secondary service-btn" onclick="PublicModule.openServiceModal('vaksinasi')">Detail Layanan</button>
+            </div>
+            <div class="service-card">
+              <div class="service-icon-wrap">✂️</div>
+              <h3 class="service-title">Sterilisasi & Kastrasi</h3>
+              <p class="service-desc">Mencegah reproduksi dan menjaga kesehatan jangka panjang.</p>
+              <button class="btn btn-secondary service-btn" onclick="PublicModule.openServiceModal('sterilisasi')">Detail Layanan</button>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 32px;">
+            <button class="btn btn-outline" data-navigate="services">Lihat Semua 6 Layanan Klinik →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW B: TENTANG KAMI (Mockup 2) -->
+    <section id="view-about" class="public-view-section" style="display: none;">
+      <div class="about-section">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content">
+              <span class="section-tag">Profil Klinik</span>
+              <h2 class="section-title">Tentang Kami</h2>
+              <h3 style="font-size: 1.3rem; color: var(--primary); margin-bottom: 16px;">
+                PETCARE | Dokter Hewan Kota Cirebon
+              </h3>
+              <p class="about-p">
+                PETCARE adalah klinik dokter hewan yang berlokasi di Kota Cirebon, hadir untuk memberikan pelayanan kesehatan hewan dengan standar profesional, modern, dan penuh kasih sayang. Kami percaya bahwa setiap hewan berhak mendapatkan perawatan terbaik agar dapat hidup sehat dan bahagia.
+              </p>
+
+              <!-- 3 Info Boxes -->
+              <div class="clinic-info-strip">
+                <div class="info-item-box">
+                  <div class="info-item-icon">📍</div>
+                  <div>
+                    <div class="info-item-label">Lokasi</div>
+                    <div class="info-item-value">Jl. Terusan Cipto No. 8, Pekiringan, Kesambi, Kota Cirebon</div>
+                  </div>
+                </div>
+                <div class="info-item-box">
+                  <div class="info-item-icon">📞</div>
+                  <div>
+                    <div class="info-item-label">Telepon</div>
+                    <div class="info-item-value">0821-3566-6170</div>
+                  </div>
+                </div>
+                <div class="info-item-box">
+                  <div class="info-item-icon">🕒</div>
+                  <div>
+                    <div class="info-item-label">Jam Operasional</div>
+                    <div class="info-item-value">09.00 - 19.00<br>Setiap hari</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mengapa Memilih Kami? -->
+              <h4 class="about-why-title">Mengapa Memilih Kami?</h4>
+              <div class="about-why-grid">
+                <div class="about-why-card">
+                  <div class="about-why-icon">👨‍⚕️</div>
+                  <div class="about-why-text">Dokter berpengalaman dan ramah</div>
+                </div>
+                <div class="about-why-card">
+                  <div class="about-why-icon">🏥</div>
+                  <div class="about-why-text">Fasilitas lengkap dan modern</div>
+                </div>
+                <div class="about-why-card">
+                  <div class="about-why-icon">⚡</div>
+                  <div class="about-why-text">Pelayanan cepat dan profesional</div>
+                </div>
+                <div class="about-why-card">
+                  <div class="about-why-icon">❤️</div>
+                  <div class="about-why-text">Fokus pada kesehatan dan kesejahteraan hewan</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Clinic Building Image -->
+            <div class="about-image-card">
+              <img src="assets/images/clinic.jpg" alt="Klinik PETCARE Cirebon" onerror="this.src='assets/images/hero-pets.jpg'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW C: LAYANAN (Mockup 3) -->
+    <section id="view-services" class="public-view-section" style="display: none;">
+      <div class="services-section">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Pelayanan Medis</span>
+            <h2 class="section-title">Layanan Kami</h2>
+            <p class="section-subtitle">
+              Kami menyediakan berbagai layanan kesehatan hewan untuk memenuhi kebutuhan sahabat kesayangan Anda.
+            </p>
+          </div>
+
+          <!-- 6 Service Cards (3x2 Grid) -->
+          <div class="services-grid">
+            <!-- 1. Pemeriksaan Umum -->
+            <div class="service-card">
+              <div class="service-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path><circle cx="20" cy="10" r="2"></circle></svg>
+              </div>
+              <h3 class="service-title">Pemeriksaan Umum</h3>
+              <p class="service-desc">Pemeriksaan kesehatan menyeluruh untuk hewan kesayangan Anda.</p>
+              <button class="btn btn-secondary service-btn" onclick="PublicModule.openServiceModal('pemeriksaan-umum')">Detail & Buat Janji</button>
+            </div>
+
+            <!-- 2. Vaksinasi -->
+            <div class="service-card">
+              <div class="service-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 2 4 4"></path><path d="m17 7 3-3"></path><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"></path><path d="m9 11 4 4"></path><path d="m5 19-3 3"></path><path d="m14 4 6 6"></path></svg>
+              </div>
+              <h3 class="service-title">Vaksinasi</h3>
+              <p class="service-desc">Melindungi dari penyakit berbahaya dengan vaksinasi rutin.</p>
+              <button class="btn btn-secondary service-btn" onclick="PublicModule.openServiceModal('vaksinasi')">Detail & Buat Janji</button>
+            </div>
+
+            <!-- 3. Sterilisasi & Kastrasi -->
+            <div class="service-card">
+              <div class="service-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+              </div>
+              <h3 class="service-title">Sterilisasi & Kastrasi</h3>
+              <p class="service-desc">Mencegah reproduksi dan menjaga kesehatan jangka panjang.</p>
+              <button class="btn btn-secondary service-btn" onclick="PublicModule.openServiceModal('sterilisasi')">Detail & Buat Janji</button>
+            </div>
+
+            <!-- 4. Pengobatan Penyakit -->
+            <div class="service-card">
+              <div class="service-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg>
+              </div>
+              <h3 class="service-title">Pengobatan Penyakit</h3>
+              <p class="service-desc">Diagnosa dan terapi untuk berbagai penyakit hewan.</p>
+              <button class="btn btn-secondary service-btn" onclick="PublicModule.openServiceModal('pengobatan')">Detail & Buat Janji</button>
+            </div>
+
+            <!-- 5. Perawatan Gigi -->
+            <div class="service-card">
+              <div class="service-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4 5 7c0 4 3 6 3 10 0 3 2 5 4 5s4-2 4-5c0-4 3-6 3-10 0-3-3-5-7-5z"></path></svg>
+              </div>
+              <h3 class="service-title">Perawatan Gigi</h3>
+              <p class="service-desc">Menjaga kesehatan mulut dan gigi hewan peliharaan.</p>
+              <button class="btn btn-secondary service-btn" onclick="PublicModule.openServiceModal('gigi')">Detail & Buat Janji</button>
+            </div>
+
+            <!-- 6. Rawat Inap -->
+            <div class="service-card">
+              <div class="service-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              </div>
+              <h3 class="service-title">Rawat Inap</h3>
+              <p class="service-desc">Perawatan intensif untuk hewan yang membutuhkan observasi.</p>
+              <button class="btn btn-secondary service-btn" onclick="PublicModule.openServiceModal('rawat-inap')">Detail & Buat Janji</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW D: JADWAL KLINIK -->
+    <section id="view-schedule" class="public-view-section" style="display: none;">
+      <div class="about-section">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Jadwal Pelayanan</span>
+            <h2 class="section-title">Jadwal Operasional & Dokter</h2>
+            <p class="section-subtitle">Klinik kami buka setiap hari dengan pelayanan dokter hewan jaga.</p>
+          </div>
+          <div style="max-width: 800px; margin: 0 auto; background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+              <div style="background: var(--primary-light); padding: 18px; border-radius: var(--radius-md);">
+                <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">Jam Buka Klinik</h4>
+                <p style="font-size: 0.95rem; font-weight: 600; color: var(--text-main);">Senin - Minggu: 09.00 - 19.00 WIB</p>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Termasuk hari libur nasional tetap melayani.</p>
+              </div>
+              <div style="background: #F0FDF4; padding: 18px; border-radius: var(--radius-md); border: 1px solid #BBF7D0;">
+                <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--success); margin-bottom: 8px;">Konsultasi & Janji Temu</h4>
+                <p style="font-size: 0.95rem; font-weight: 600; color: var(--text-main);">Slot Kunjungan: 09.00 - 17.00 WIB</p>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Dapat dipesan langsung melalui website ini.</p>
+              </div>
+            </div>
+            <div style="text-align: center;">
+              <button class="btn btn-primary" onclick="App.navigateTo('appointments')">Buat Janji Temu Sekarang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW E: KONTAK -->
+    <section id="view-contact" class="public-view-section" style="display: none;">
+      <div class="contact-section">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Hubungi Kami</span>
+            <h2 class="section-title">Kontak & Lokasi Klinik</h2>
+            <p class="section-subtitle">Silakan datang langsung atau kirimkan pesan untuk konsultasi awal.</p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-info-list">
+              <div class="contact-card-item">
+                <div class="contact-card-icon">📍</div>
+                <div>
+                  <div class="contact-card-title">Alamat Klinik</div>
+                  <div class="contact-card-desc">Jl. Terusan Cipto No. 8, Pekiringan, Kesambi, Kota Cirebon</div>
+                </div>
+              </div>
+              <div class="contact-card-item">
+                <div class="contact-card-icon">📞</div>
+                <div>
+                  <div class="contact-card-title">Nomor WhatsApp & Telepon</div>
+                  <div class="contact-card-desc">0821-3566-6170</div>
+                </div>
+              </div>
+              <div class="contact-card-item">
+                <div class="contact-card-icon">🕒</div>
+                <div>
+                  <div class="contact-card-title">Jam Pelayanan</div>
+                  <div class="contact-card-desc">09.00 - 19.00 WIB Setiap Hari</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Message Form -->
+            <div class="card">
+              <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 16px; color: var(--text-main);">Kirim Pesan Konsultasi</h4>
+              <form id="contactForm">
+                <div class="form-group">
+                  <label class="form-label">Nama Anda <span class="required">*</span></label>
+                  <input type="text" id="contactName" class="form-control" placeholder="Contoh: Nasywa Maulani" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email atau WhatsApp <span class="required">*</span></label>
+                  <input type="text" id="contactEmail" class="form-control" placeholder="nasywa@email.com / 0812-xxxx" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Pesan / Pertanyaan <span class="required">*</span></label>
+                  <textarea id="contactMsg" class="form-control" placeholder="Tuliskan pertanyaan seputar hewan kesayangan Anda..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pesan</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW F: LOGIN & REGISTER (Mockup 8) -->
+    <section id="view-login" class="public-view-section" style="display: none;">
+      <div class="auth-page-container">
+        <div class="auth-split-card">
+          <!-- Left side: Dog & Cat Photo + Branding -->
+          <div class="auth-side-brand">
+            <div class="auth-brand-logo-area">
+              <img src="assets/images/logo.svg" alt="PETCARE" width="48" height="48">
+              <h3 style="font-weight: 800; color: #1E293B;">PETCARE</h3>
+              <p class="auth-side-slogan">Kesehatan hewan, kebahagiaan bersama</p>
+            </div>
+            <div class="auth-side-image-wrap">
+              <img src="assets/images/login-pets.jpg" alt="Dog and Cat" onerror="this.src='assets/images/hero-pets.jpg'">
+            </div>
+            <!-- Quick Demo Login Switcher -->
+            <div class="auth-side-demo">
+              <span>Akun Demonstrasi Cepat:</span>
+              <div class="demo-btn-group">
+                <button class="btn btn-secondary btn-sm" onclick="PublicModule.quickDemoLogin('nasywa')">Klien (Nasywa)</button>
+                <button class="btn btn-secondary btn-sm" onclick="PublicModule.quickDemoLogin('vet')">Dokter (dr. Sari)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: Form (Masuk ke Akun Anda) -->
+          <div class="auth-form-area" id="loginFormWrap">
+            <div class="auth-head">
+              <h2>Masuk ke Akun Anda</h2>
+              <p>Silakan login untuk melanjutkan.</p>
+            </div>
+            <form id="loginForm">
+              <div class="form-group">
+                <label class="form-label">Email atau Nomor HP</label>
+                <div class="input-with-icon">
+                  <span class="input-icon-left">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </span>
+                  <input type="text" id="loginIdentifier" class="form-control" placeholder="contoh@email.com" value="nasywa@email.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Password</label>
+                <div class="input-with-icon">
+                  <span class="input-icon-left">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  </span>
+                  <input type="password" id="loginPassword" class="form-control" placeholder="Masukkan password" value="password123" required>
+                  <button type="button" class="input-toggle-btn" title="Tampilkan / Sembunyikan Password">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  </button>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                <label class="form-check">
+                  <input type="checkbox" id="rememberMe" checked>
+                  <span>Ingat saya</span>
+                </label>
+                <a href="#" style="font-size: 0.85rem; font-weight: 600;" onclick="App.openModal('forgotPasswordModal'); return false;">Lupa password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Masuk</button>
+              <div class="auth-divider">
+                <span>atau</span>
+              </div>
+              <button type="button" class="btn btn-outline" style="width: 100%;" onclick="document.getElementById('loginFormWrap').style.display='none'; document.getElementById('registerFormWrap').style.display='block';">
+                Daftar Akun Baru
+              </button>
+            </form>
+          </div>
+
+          <!-- Toggle: Register Form -->
+          <div class="auth-form-area" id="registerFormWrap" style="display: none;">
+            <div class="auth-head">
+              <h2>Pendaftaran Pengguna</h2>
+              <p>Daftarkan akun untuk memantau rekam medis hewan.</p>
+            </div>
+            <form id="registerForm">
+              <div class="form-group">
+                <label class="form-label">Nama Lengkap</label>
+                <input type="text" id="regFullName" class="form-control" placeholder="Contoh: Nasywa Maulani" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" id="regEmail" class="form-control" placeholder="nama@email.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Nomor WhatsApp / HP</label>
+                <input type="tel" id="regPhone" class="form-control" placeholder="0812-3456-7890" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Password</label>
+                <div class="input-with-icon">
+                  <input type="password" id="regPassword" class="form-control" placeholder="Minimal 6 karakter" required>
+                  <button type="button" class="input-toggle-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Konfirmasi Password</label>
+                <input type="password" id="regConfirmPassword" class="form-control" placeholder="Ulangi password" required>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Daftar Sekarang</button>
+              <div class="auth-divider">
+                <span>atau</span>
+              </div>
+              <button type="button" class="btn btn-outline" style="width: 100%;" onclick="document.getElementById('registerFormWrap').style.display='none'; document.getElementById('loginFormWrap').style.display='block';">
+                Sudah punya akun? Masuk
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Public Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h4>🐾 PETCARE</h4>
+            <p>Klinik dokter hewan terpercaya di Kota Cirebon. Menyediakan rekam medis digital, pengingat vaksinasi otomatis, dan perawatan holistik sahabat berbulu Anda.</p>
+            <p style="font-size: 0.85rem; color: #64748B;">
+              *Data contoh dalam aplikasi ini disediakan untuk keperluan demonstrasi sistem.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h5>Navigasi</h5>
+            <ul class="footer-links">
+              <li><a href="#" data-navigate="home">Beranda</a></li>
+              <li><a href="#" data-navigate="about">Tentang Kami</a></li>
+              <li><a href="#" data-navigate="services">Layanan Medis</a></li>
+              <li><a href="#" data-navigate="schedule">Jadwal Operasional</a></li>
+              <li><a href="#" data-navigate="contact">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Layanan Utama</h5>
+            <ul class="footer-links">
+              <li><a href="#" onclick="PublicModule.openServiceModal('pemeriksaan-umum')">Pemeriksaan Umum</a></li>
+              <li><a href="#" onclick="PublicModule.openServiceModal('vaksinasi')">Vaksinasi Rutin</a></li>
+              <li><a href="#" onclick="PublicModule.openServiceModal('sterilisasi')">Sterilisasi & Kastrasi</a></li>
+              <li><a href="#" onclick="PublicModule.openServiceModal('pengobatan')">Pengobatan Penyakit</a></li>
+              <li><a href="#" onclick="PublicModule.openServiceModal('gigi')">Perawatan Gigi</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Lokasi & Kontak</h5>
+            <p style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.5; margin-bottom: 10px;">
+              Jl. Terusan Cipto No. 8, Pekiringan, Kesambi, Kota Cirebon
+            </p>
+            <p style="color: #CBD5E1; font-size: 0.9rem; margin-bottom: 6px;">
+              📞 0821-3566-6170
+            </p>
+            <p style="color: #CBD5E1; font-size: 0.9rem;">
+              🕒 09.00 - 19.00 Setiap Hari
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>© 2026 PETCARE Kota Cirebon. Seluruh Hak Cipta Dilindungi.</div>
+          <div style="color: #64748B;">Dirancang dengan fokus pada Rekam Medis & Manajemen Vaksinasi</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ====================================================================
+       2. DASHBOARD / PORTAL LAYOUT (Sidebar + Main Area)
+       ==================================================================== -->
+  <div id="dashboardLayout" class="dashboard-layout" style="display: none;">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header" data-navigate="overview" style="cursor: pointer;">
+        <img src="assets/images/logo.svg" alt="PETCARE" width="34" height="34">
+        <div>
+          <div class="sidebar-brand-name">PETCARE</div>
+          <div class="sidebar-brand-sub">Dokter Hewan Kota Cirebon</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-item active" data-navigate="overview">
+          <span class="sidebar-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </span>
+          <span>Beranda</span>
+        </div>
+        <div class="sidebar-item" data-navigate="pets">
+          <span class="sidebar-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 2a4 4 0 0 0-4 4c0 1.5.8 2.8 2 3.5"></path><path d="M12 22a4 4 0 0 0 4-4c0-1.5-.8-2.8-2-3.5"></path><path d="M22 12a4 4 0 0 0-4-4c-1.5 0-2.8.8-3.5 2"></path><path d="M2 12a4 4 0 0 0 4 4c1.5 0 2.8-.8 3.5-2"></path></svg>
+          </span>
+          <span>Hewan Peliharaan</span>
+        </div>
+        <div class="sidebar-item" data-navigate="records">
+          <span class="sidebar-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </span>
+          <span>Rekam Medis</span>
+        </div>
+        <div class="sidebar-item" data-navigate="vaccines">
+          <span class="sidebar-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 2 4 4"></path><path d="m17 7 3-3"></path><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"></path><path d="m9 11 4 4"></path><path d="m5 19-3 3"></path><path d="m14 4 6 6"></path></svg>
+          </span>
+          <span>Jadwal Vaksinasi</span>
+        </div>
+        <div class="sidebar-item" data-navigate="appointments">
+          <span class="sidebar-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </span>
+          <span>Janji Temu</span>
+          <span class="badge-pending-count" style="display: none;">0</span>
+        </div>
+        <div class="sidebar-item" data-navigate="reminders">
+          <span class="sidebar-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          </span>
+          <span>Pengingat</span>
+        </div>
+        <div class="sidebar-item" data-navigate="profile">
+          <span class="sidebar-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </span>
+          <span>Profil</span>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="sidebar-logout-btn action-logout-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>Keluar</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Dashboard Area -->
+    <main class="dashboard-main">
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button class="mobile-sidebar-toggle" id="sidebarToggle">☰</button>
+          <div class="topbar-search">
+            <span class="topbar-search-icon">🔍</span>
+            <input type="text" placeholder="Cari hewan, rekam medis, dokter..." onclick="App.openSearchModal()">
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Quick Role Switcher Pill -->
+          <div id="topbarRoleSwitcher" class="admin-mode-pill" onclick="App.toggleUserRole()" title="Klik untuk beralih mode akun antara Klien dan Dokter / Admin">
+            <span id="roleIcon">🩺</span>
+            <span id="roleLabel">Mode Klien</span>
+            <span style="font-size: 0.7rem; opacity: 0.75;">(Ubah)</span>
+          </div>
+
+          <!-- Notification Bell -->
+          <button class="notif-bell-btn" onclick="App.navigateTo('reminders')" title="Lihat Pengingat">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="notif-badge-count"></span>
+          </button>
+
+          <!-- User Pill -->
+          <div class="user-profile-pill" onclick="App.navigateTo('profile')">
+            <img src="assets/images/user-avatar.svg" alt="User" class="user-avatar-img">
+            <span class="user-pill-name">Nasywa</span>
+            <span style="font-size: 0.75rem; color: var(--text-light);">▼</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard View Containers -->
+      <div class="dashboard-content">
+
+        <!-- SECTION 1: OVERVIEW / BERANDA DASHBOARD (Mockup 9) -->
+        <div id="dash-overview" class="dashboard-view-section">
+          <div class="view-section-header">
+            <div>
+              <h2 class="view-header-title">Selamat Datang, <span id="dashGreetingName">Nasywa</span>!</h2>
+              <p class="view-header-subtitle">Berikut ringkasan kesehatan hewan peliharaan Anda.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="App.navigateTo('appointments')">
+              + Buat Janji Temu
+            </button>
+          </div>
+
+          <!-- 3 Stat Cards -->
+          <div class="stat-cards-grid">
+            <div class="stat-card" onclick="App.navigateTo('pets')" style="cursor: pointer;">
+              <div class="stat-icon-wrap">🐾</div>
+              <div>
+                <div class="stat-number" id="statTotalPets">2</div>
+                <div class="stat-label">Hewan Peliharaan</div>
+              </div>
+            </div>
+            <div class="stat-card" onclick="App.navigateTo('vaccines')" style="cursor: pointer;">
+              <div class="stat-icon-wrap" style="background-color: var(--warning-bg); color: var(--warning-text);">💉</div>
+              <div>
+                <div class="stat-number" id="statTotalVaccines">3</div>
+                <div class="stat-label">Jadwal Vaksinasi</div>
+              </div>
+            </div>
+            <div class="stat-card" onclick="App.navigateTo('appointments')" style="cursor: pointer;">
+              <div class="stat-icon-wrap" style="background-color: #F0FDF4; color: var(--success-text);">🕒</div>
+              <div>
+                <div class="stat-number" id="statTotalAppts">1</div>
+                <div class="stat-label">Pemeriksaan Terdekat</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 Columns: Upcoming Vaccines & Recent Activities -->
+          <div class="overview-two-col">
+            <!-- Left: Jadwal Vaksinasi Terdekat -->
+            <div class="panel-card">
+              <div class="panel-head">
+                <h4 class="panel-title">Jadwal Vaksinasi Terdekat</h4>
+                <a href="#" class="panel-link" onclick="App.navigateTo('vaccines'); return false;">Lihat Semua →</a>
+              </div>
+              <div id="dashUpcomingVaccinesList">
+                <!-- Dynamically loaded by app.js -->
+              </div>
+            </div>
+
+            <!-- Right: Aktivitas Terbaru -->
+            <div class="panel-card">
+              <div class="panel-head">
+                <h4 class="panel-title">Aktivitas Terbaru</h4>
+                <a href="#" class="panel-link" onclick="App.navigateTo('records'); return false;">Lihat Semua →</a>
+              </div>
+              <div id="dashRecentActivityList" class="timeline-list">
+                <!-- Dynamically loaded by app.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: DATA HEWAN PELIHARAAN (Mockup 5) -->
+        <div id="dash-pets" class="dashboard-view-section" style="display: none;">
+          <div class="view-section-header">
+            <div>
+              <h2 class="view-header-title">Profil & Data Hewan</h2>
+              <p class="view-header-subtitle">Kelola informasi identitas, catatan medis, dan jadwal setiap hewan peliharaan.</p>
+            </div>
+            <button class="btn btn-primary" id="btnAddPetModal">
+              + Tambah Hewan Baru
+            </button>
+          </div>
+
+          <!-- Main Selected Pet Detail Card (Mockup Row 2 Screen 2) -->
+          <div id="petProfileDetailContainer">
+            <!-- Rendered by pets.js -->
+          </div>
+
+          <!-- All Registered Pets Grid & Filter -->
+          <div style="margin-top: 36px;">
+            <div class="filter-bar-wrap">
+              <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main);">Daftar Semua Hewan Peliharaan</h4>
+              <div class="filter-controls-group">
+                <select id="petsSpeciesFilter" class="filter-select">
+                  <option value="Semua">Semua Spesies</option>
+                  <option value="Anjing">Anjing</option>
+                  <option value="Kucing">Kucing</option>
+                  <option value="Lainnya">Lainnya</option>
+                </select>
+                <input type="text" id="petsSearchInput" class="form-control" placeholder="Cari nama / kode hewan..." style="width: 220px; padding: 7px 12px; font-size: 0.885rem;">
+              </div>
+            </div>
+
+            <div class="pets-cards-grid" id="petsCardsListContainer">
+              <!-- Rendered by pets.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: REKAM MEDIS (Mockup 6) -->
+        <div id="dash-records" class="dashboard-view-section" style="display: none;">
+          <div class="view-section-header">
+            <div>
+              <h2 class="view-header-title">Rekam Medis</h2>
+              <p class="view-header-subtitle">Riwayat pemeriksaan dan pengobatan hewan peliharaan Anda.</p>
+            </div>
+            <button class="btn btn-primary" id="btnAddRecordModal">
+              + Tambah Rekam Medis
+            </button>
+          </div>
+
+          <!-- Filter Bar (Mockup Row 2 Screen 3) -->
+          <div class="card" style="padding: 16px 20px; margin-bottom: 20px;">
+            <div class="filter-bar-wrap" style="margin-bottom: 0;">
+              <div class="filter-controls-group">
+                <select id="recordPetFilter" class="filter-select">
+                  <option value="Semua">Semua Hewan Peliharaan</option>
+                </select>
+              </div>
+              <div class="input-with-icon" style="width: 280px;">
+                <span class="input-icon-left">🔍</span>
+                <input type="text" id="recordSearchInput" class="form-control" placeholder="Cari riwayat, diagnosa, dokter..." style="padding: 8px 12px 8px 36px; font-size: 0.885rem;">
+              </div>
+            </div>
+          </div>
+
+          <!-- Medical Records Table -->
+          <div class="table-responsive" style="background: #FFFFFF;">
+            <table class="table-custom">
+              <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>Jenis Layanan</th>
+                  <th>Diagnosa / Keterangan</th>
+                  <th>Dokter</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="recordsTableBody">
+                <!-- Rendered by medical-records.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 4: JADWAL VAKSINASI (Mockup 7) -->
+        <div id="dash-vaccines" class="dashboard-view-section" style="display: none;">
+          <div class="view-section-header">
+            <div>
+              <h2 class="view-header-title">Jadwal Vaksinasi</h2>
+              <p class="view-header-subtitle">Jangan lupa vaksinasi rutin untuk perlindungan maksimal.</p>
+            </div>
+            <button class="btn btn-primary" id="btnAddVaccineModal">
+              + Tambah Jadwal
+            </button>
+          </div>
+
+          <!-- 2-Column: Left Calendar, Right Upcoming List (Mockup Row 3 Screen 1) -->
+          <div class="vaccine-layout-grid">
+            <!-- Left: Calendar Card -->
+            <div class="calendar-card">
+              <div class="calendar-header">
+                <h4 class="calendar-month-title" id="calCurrentMonthTitle">Oktober 2026</h4>
+                <div style="display: flex; gap: 8px;">
+                  <button class="calendar-nav-btn" id="calPrevMonthBtn" title="Bulan Sebelumnya">‹</button>
+                  <button class="calendar-nav-btn" id="calNextMonthBtn" title="Bulan Berikutnya">›</button>
+                </div>
+              </div>
+              <div class="calendar-grid" id="calDaysGrid">
+                <!-- Rendered by vaccinations.js -->
+              </div>
+              <div style="margin-top: 16px; font-size: 0.785rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                <span style="display: inline-block; width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></span>
+                Titik penanda menunjukkan ada jadwal vaksinasi pada tanggal tersebut.
+              </div>
+            </div>
+
+            <!-- Right: Upcoming List -->
+            <div class="panel-card">
+              <div class="panel-head">
+                <h4 class="panel-title">Jadwal Mendatang</h4>
+                <div style="display: flex; gap: 8px;">
+                  <select id="vaccineStatusFilter" class="filter-select" style="font-size: 0.785rem; padding: 4px 8px;">
+                    <option value="Semua">Semua Status</option>
+                    <option value="Terjadwal">Terjadwal</option>
+                    <option value="Selesai">Selesai</option>
+                  </select>
+                </div>
+              </div>
+              <div id="upcomingVaccinesListContainer">
+                <!-- Rendered by vaccinations.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: KELOLA & BUAT JANJI TEMU (Admin & Client) -->
+        <div id="dash-appointments" class="dashboard-view-section" style="display: none;">
+          <div class="view-section-header">
+            <div>
+              <h2 class="view-header-title">Kelola & Buat Janji Temu</h2>
+              <p class="view-header-subtitle">Meja administrasi janji temu klinik hewan dan formulir kunjungan pasien.</p>
+            </div>
+            <!-- View Tabs: Admin Desk vs Client Booking Wizard -->
+            <div class="admin-tabs-nav">
+              <button type="button" class="admin-tab-btn active" id="tabBtnApptAdmin" onclick="AppointmentsModule.switchViewTab('admin')">
+                <span>📋 Meja Kelola Janji Temu (Admin)</span>
+                <span class="badge-pending-count" style="display: none;">0</span>
+              </button>
+              <button type="button" class="admin-tab-btn" id="tabBtnApptClient" onclick="AppointmentsModule.switchViewTab('client')">
+                <span>➕ Formulir Pasien (Buat Janji)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- A. ADMIN APPOINTMENT DESK -->
+          <div id="apptAdminSection">
+            <!-- 4 Summary KPI Cards -->
+            <div class="admin-summary-grid">
+              <div class="admin-stat-box">
+                <div>
+                  <div class="admin-stat-number" id="kpiTotalAppts">0</div>
+                  <div class="admin-stat-title">Total Janji Temu</div>
+                </div>
+                <div style="font-size: 1.8rem;">📅</div>
+              </div>
+              <div class="admin-stat-box" style="background: #FFFDF5; border-color: #FDE68A;">
+                <div>
+                  <div class="admin-stat-number" style="color: var(--warning-text);" id="kpiPendingAppts">0</div>
+                  <div class="admin-stat-title" style="color: var(--warning-text); font-weight: 700;">Menunggu Konfirmasi</div>
+                </div>
+                <div style="font-size: 1.8rem;">⏳</div>
+              </div>
+              <div class="admin-stat-box" style="background: #F0FDF4; border-color: #BBF7D0;">
+                <div>
+                  <div class="admin-stat-number" style="color: var(--success);" id="kpiConfirmedAppts">0</div>
+                  <div class="admin-stat-title">Telah Dikonfirmasi</div>
+                </div>
+                <div style="font-size: 1.8rem;">✓</div>
+              </div>
+              <div class="admin-stat-box" style="background: var(--primary-light); border-color: var(--primary-200);">
+                <div>
+                  <div class="admin-stat-number" style="color: var(--primary);" id="kpiCompletedAppts">0</div>
+                  <div class="admin-stat-title">Kunjungan Selesai</div>
+                </div>
+                <div style="font-size: 1.8rem;">🩺</div>
+              </div>
+            </div>
+
+            <!-- Admin Filter Controls Bar -->
+            <div class="card" style="padding: 16px 20px; margin-bottom: 20px;">
+              <div class="filter-bar-wrap" style="margin-bottom: 0;">
+                <div class="filter-controls-group">
+                  <button type="button" class="btn btn-sm btn-secondary admin-filter-pill active" data-status="Semua" onclick="AppointmentsModule.filterAdminByStatus('Semua')">Semua Status</button>
+                  <button type="button" class="btn btn-sm btn-secondary admin-filter-pill" data-status="Menunggu Konfirmasi" onclick="AppointmentsModule.filterAdminByStatus('Menunggu Konfirmasi')">⏳ Menunggu Konfirmasi</button>
+                  <button type="button" class="btn btn-sm btn-secondary admin-filter-pill" data-status="Dikonfirmasi" onclick="AppointmentsModule.filterAdminByStatus('Dikonfirmasi')">✓ Dikonfirmasi</button>
+                  <button type="button" class="btn btn-sm btn-secondary admin-filter-pill" data-status="Selesai" onclick="AppointmentsModule.filterAdminByStatus('Selesai')">Selesai</button>
+                  <button type="button" class="btn btn-sm btn-secondary admin-filter-pill" data-status="Dibatalkan" onclick="AppointmentsModule.filterAdminByStatus('Dibatalkan')">Dibatalkan</button>
+                </div>
+
+                <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                  <select id="adminApptDateFilter" class="filter-select" style="padding: 7px 12px; font-size: 0.885rem;">
+                    <option value="all">Semua Tanggal</option>
+                    <option value="today">Hari Ini</option>
+                    <option value="tomorrow">Besok</option>
+                  </select>
+                  <div class="input-with-icon" style="width: 240px;">
+                    <span class="input-icon-left">🔍</span>
+                    <input type="text" id="adminApptSearch" class="form-control" placeholder="Cari pemilik/hewan/layanan..." style="padding: 7px 12px 7px 34px; font-size: 0.885rem;">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Admin Appointments Table -->
+            <div class="table-responsive" style="background: #FFFFFF;">
+              <table class="table-custom">
+                <thead>
+                  <tr>
+                    <th>Tiket & Jadwal</th>
+                    <th>Pemilik & Kontak</th>
+                    <th>Pasien Hewan</th>
+                    <th>Layanan & Keluhan</th>
+                    <th>Status & Dokter Jaga</th>
+                    <th>Aksi Admin</th>
+                  </tr>
+                </thead>
+                <tbody id="adminApptsTableBody">
+                  <!-- Rendered by appointments.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- B. CLIENT BOOKING WIZARD -->
+          <div id="apptClientSection" style="display: none;">
+            <div class="booking-wizard-card">
+              <!-- 3-Step Indicators -->
+              <div class="wizard-stepper">
+                <div class="stepper-line"></div>
+                <div class="stepper-item active" id="stepItem1">
+                  <div class="stepper-circle">1</div>
+                  <div class="stepper-label">Pilih Layanan</div>
+                </div>
+                <div class="stepper-item" id="stepItem2">
+                  <div class="stepper-circle">2</div>
+                  <div class="stepper-label">Pilih Tanggal & Waktu</div>
+                </div>
+                <div class="stepper-item" id="stepItem3">
+                  <div class="stepper-circle">3</div>
+                  <div class="stepper-label">Konfirmasi</div>
+                </div>
+              </div>
+
+              <!-- STEP 1: Pilih Layanan (Mockup 4 Top) -->
+              <div id="wizardStep1" class="wizard-step-panel">
+                <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 16px; color: var(--text-main);">Pilih Layanan Klinik</h4>
+                <div class="service-select-grid">
+                  <div class="service-select-card selected" data-service="Pemeriksaan Umum" onclick="AppointmentsModule.selectService('Pemeriksaan Umum')">
+                    <div class="service-select-icon">🩺</div>
+                    <h5>Pemeriksaan Umum</h5>
+                  </div>
+                  <div class="service-select-card" data-service="Vaksinasi" onclick="AppointmentsModule.selectService('Vaksinasi')">
+                    <div class="service-select-icon">💉</div>
+                    <h5>Vaksinasi</h5>
+                  </div>
+                  <div class="service-select-card" data-service="Sterilisasi & Kastrasi" onclick="AppointmentsModule.selectService('Sterilisasi & Kastrasi')">
+                    <div class="service-select-icon">✂️</div>
+                    <h5>Sterilisasi & Kastrasi</h5>
+                  </div>
+                  <div class="service-select-card" data-service="Pengobatan Penyakit" onclick="AppointmentsModule.selectService('Pengobatan Penyakit')">
+                    <div class="service-select-icon">💊</div>
+                    <h5>Pengobatan Penyakit</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 2: Pilih Tanggal & Waktu (Mockup 4 Bottom) -->
+              <div id="wizardStep2" class="wizard-step-panel" style="display: none;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+                  <div>
+                    <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 14px; color: var(--text-main);">Pilih Tanggal Kunjungan</h4>
+                    <div class="form-group">
+                      <label class="form-label">Tanggal Janji Temu</label>
+                      <input type="date" id="wizardDateInput" class="form-control" style="font-size: 1rem; padding: 12px;">
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                      ℹ Pelayanan klinik dibuka mulai pukul 09.00 sampai 17.00 WIB untuk janji temu dokter.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 14px; color: var(--text-main);">Pilih Jam Kunjungan</h4>
+                    <div class="time-slots-grid" id="wizardTimeSlotsContainer">
+                      <!-- Rendered by appointments.js -->
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px;">
+                      *Slot yang bertuliskan "(Penuh)" sudah dipesan pasien lain guna mencegah jadwal ganda.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 3: Konfirmasi & Pilih Hewan -->
+              <div id="wizardStep3" class="wizard-step-panel" style="display: none;">
+                <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 14px; color: var(--text-main);">Detail Pasien & Keluhan</h4>
+                <div id="wizardReviewSummary">
+                  <!-- Summary inserted by appointments.js -->
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Pilih Hewan yang Akan Diperiksa <span class="required">*</span></label>
+                  <select id="wizardPetSelect" class="form-control">
+                    <!-- Populated by appointments.js -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Keluhan atau Catatan Tambahan (Opsional)</label>
+                  <textarea id="wizardComplaintsInput" class="form-control" placeholder="Contoh: Kucing lemas dan tidak mau makan sejak kemarin..."></textarea>
+                </div>
+              </div>
+
+              <!-- Wizard Navigation Buttons -->
+              <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                <button type="button" class="btn btn-outline" id="wizardBtnBack" style="display: none;">
+                  Kembali
+                </button>
+                <button type="button" class="btn btn-primary" id="wizardBtnNext">
+                  Lanjutkan →
+                </button>
+              </div>
+            </div>
+
+            <!-- Client Appointments List Table -->
+            <div style="margin-top: 40px;">
+              <h4 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 16px; color: var(--text-main);">Riwayat Janji Temu Saya</h4>
+              <div class="table-responsive" style="background: #FFFFFF;">
+                <table class="table-custom">
+                  <thead>
+                    <tr>
+                      <th>Tanggal & Waktu</th>
+                      <th>Nama Hewan</th>
+                      <th>Layanan</th>
+                      <th>Status</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="appointmentsListTableBody">
+                    <!-- Rendered by appointments.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 6: PENGINGAT -->
+        <div id="dash-reminders" class="dashboard-view-section" style="display: none;">
+          <div class="view-section-header">
+            <div>
+              <h2 class="view-header-title">Pengingat Kesehatan & Kontrol</h2>
+              <p class="view-header-subtitle">Notifikasi jatuh tempo jadwal vaksinasi dan anjuran kontrol dokter.</p>
+            </div>
+            <div class="filter-controls-group">
+              <button class="btn btn-secondary btn-sm reminder-filter-btn active" data-filter="all">Semua</button>
+              <button class="btn btn-secondary btn-sm reminder-filter-btn" data-filter="urgent">Mendesak</button>
+              <button class="btn btn-secondary btn-sm reminder-filter-btn" data-filter="vaccine">Vaksin</button>
+              <button class="btn btn-secondary btn-sm reminder-filter-btn" data-filter="control">Kontrol Dokter</button>
+            </div>
+          </div>
+
+          <div id="remindersListContainer">
+            <!-- Rendered by reminders.js -->
+          </div>
+        </div>
+
+        <!-- SECTION 7: PROFIL PENGGUNA -->
+        <div id="dash-profile" class="dashboard-view-section" style="display: none;">
+          <div class="view-section-header">
+            <div>
+              <h2 class="view-header-title">Profil Pengguna</h2>
+              <p class="view-header-subtitle">Kelola informasi kontak dan pengaturan keamanan akun Anda.</p>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px;">
+            <!-- Profile Info Form -->
+            <div class="card">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main);">Informasi Pribadi</h4>
+                <span id="profileRoleBadge" class="badge badge-primary">Pemilik Hewan</span>
+              </div>
+              <form id="userProfileForm">
+                <div class="form-group">
+                  <label class="form-label">Nama Lengkap</label>
+                  <input type="text" id="profileFullName" class="form-control" required>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" id="profileEmail" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Nomor Telepon / WhatsApp</label>
+                    <input type="tel" id="profilePhone" class="form-control" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Alamat Lengkap</label>
+                  <textarea id="profileAddress" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Simpan Perubahan Profil</button>
+              </form>
+            </div>
+
+            <!-- Change Password Form -->
+            <div class="card">
+              <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 20px;">Keamanan Password</h4>
+              <form id="userPasswordForm">
+                <div class="form-group">
+                  <label class="form-label">Password Lama</label>
+                  <input type="password" id="passOld" class="form-control" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Password Baru</label>
+                  <input type="password" id="passNew" class="form-control" placeholder="Minimal 6 karakter" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Ulangi Password Baru</label>
+                  <input type="password" id="passConfirm" class="form-control" placeholder="Ulangi password baru" required>
+                </div>
+                <button type="submit" class="btn btn-outline" style="width: 100%;">Perbarui Password</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ====================================================================
+       3. MODALS (Popups for CRUD & Details)
+       ==================================================================== -->
+
+  <!-- Modal: Tambah / Edit Hewan -->
+  <div id="petFormModal" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 620px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="petModalTitle">Tambah Hewan Peliharaan</h3>
+        <button class="modal-close" data-modal-close>✕</button>
+      </div>
+      <form id="petForm">
+        <div class="modal-body">
+          <input type="hidden" id="petFormId">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Nama Hewan <span class="required">*</span></label>
+              <input type="text" id="petFormName" class="form-control" placeholder="Contoh: Mochi" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Jenis Hewan <span class="required">*</span></label>
+              <select id="petFormSpecies" class="form-control" required>
+                <option value="Anjing">Anjing</option>
+                <option value="Kucing">Kucing</option>
+                <option value="Kelinci">Kelinci</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Ras</label>
+              <input type="text" id="petFormBreed" class="form-control" placeholder="Contoh: Golden Retriever">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Jenis Kelamin</label>
+              <select id="petFormGender" class="form-control">
+                <option value="Jantan">Jantan</option>
+                <option value="Betina">Betina</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Tanggal Lahir</label>
+              <input type="date" id="petFormBirthDate" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Berat Badan (kg) <span class="required">*</span></label>
+              <input type="number" step="0.1" id="petFormWeight" class="form-control" placeholder="Contoh: 28.0" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Warna atau Ciri Khusus</label>
+            <input type="text" id="petFormColor" class="form-control" placeholder="Contoh: Emas kecokelatan, bercak putih di dada">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Catatan Alergi atau Kondisi Khusus</label>
+            <textarea id="petFormAllergy" class="form-control" placeholder="Contoh: Alergi pakan ayam potong, hindari shampo berparfum kuat"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">URL Foto Hewan</label>
+              <input type="text" id="petFormPhoto" class="form-control" placeholder="assets/images/mochi.jpg atau URL online">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Status Pasien</label>
+              <select id="petFormStatus" class="form-control">
+                <option value="Aktif">Aktif</option>
+                <option value="Nonaktif">Nonaktif</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-modal-close>Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan Data Hewan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Tambah / Edit Rekam Medis -->
+  <div id="recordFormModal" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 680px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="recordModalTitle">Tambah Rekam Medis</h3>
+        <button class="modal-close" data-modal-close>✕</button>
+      </div>
+      <form id="recordForm">
+        <div class="modal-body">
+          <input type="hidden" id="recordFormId">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Pilih Hewan Pasien <span class="required">*</span></label>
+              <select id="recordFormPetId" class="form-control" required>
+                <!-- Populated by JS -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tanggal Pemeriksaan <span class="required">*</span></label>
+              <input type="date" id="recordFormExamDate" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Jenis Layanan <span class="required">*</span></label>
+              <select id="recordFormService" class="form-control" required>
+                <option value="Pemeriksaan Umum">Pemeriksaan Umum</option>
+                <option value="Vaksinasi Rabies">Vaksinasi Rabies</option>
+                <option value="Vaksinasi DHPPi">Vaksinasi DHPPi</option>
+                <option value="Vaksinasi FVRCP">Vaksinasi FVRCP</option>
+                <option value="Sterilisasi & Kastrasi">Sterilisasi & Kastrasi</option>
+                <option value="Pengobatan">Pengobatan</option>
+                <option value="Perawatan Gigi">Perawatan Gigi</option>
+                <option value="Rawat Inap">Rawat Inap</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Dokter yang Menangani <span class="required">*</span></label>
+              <input type="text" id="recordFormDoctor" class="form-control" value="dr. Sari Wijaya, Sp.KH" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Keluhan Awal</label>
+            <textarea id="recordFormComplaints" class="form-control" placeholder="Contoh: Nafsu makan turun, sering menggaruk telinga kiri..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Hasil Pemeriksaan Fisik</label>
+            <textarea id="recordFormExam" class="form-control" placeholder="Contoh: Suhu 38.4°C, berat badan 28 kg, telinga kemerahan ringan..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Diagnosis Dokter <span class="required">*</span></label>
+            <input type="text" id="recordFormDiagnosis" class="form-control" placeholder="Contoh: Dermatitis Kontak Ringan" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Tindakan / Pengobatan <span class="required">*</span></label>
+            <textarea id="recordFormTreatment" class="form-control" placeholder="Contoh: Pembersihan telinga dengan antiseptic otic dan salep..." required></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Obat yang Diberikan</label>
+              <input type="text" id="recordFormMedicine" class="form-control" placeholder="Contoh: Salep Gentamicin 0.1%, Meloxicam 1.5mg">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Jadwal Kontrol Berikutnya (Jika Ada)</label>
+              <input type="date" id="recordFormNextControl" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Catatan Tambahan Dokter Hewan</label>
+            <textarea id="recordFormNotes" class="form-control" placeholder="Saran pola makan, hindari memandikan sementara, dll."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-modal-close>Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan Rekam Medis</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Detail Rekam Medis (Printable Slip) -->
+  <div id="recordDetailModal" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 650px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Lembar Rekam Medis Hewan</h3>
+        <button class="modal-close" data-modal-close>✕</button>
+      </div>
+      <div class="modal-body" id="recordDetailContent">
+        <!-- Rendered by medical-records.js -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" id="btnPrintRecordDetail">
+          🖨 Cetak Lembar Rekam Medis
+        </button>
+        <button type="button" class="btn btn-primary btn-sm" data-modal-close>Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Tambah / Edit Jadwal Vaksinasi -->
+  <div id="vaccineFormModal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="vaccineModalTitle">Tambah Jadwal Vaksinasi</h3>
+        <button class="modal-close" data-modal-close>✕</button>
+      </div>
+      <form id="vaccineForm">
+        <div class="modal-body">
+          <input type="hidden" id="vaccineFormId">
+          <div class="form-group">
+            <label class="form-label">Pilih Hewan <span class="required">*</span></label>
+            <select id="vaccineFormPetId" class="form-control" required></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Jenis Vaksin <span class="required">*</span></label>
+            <input type="text" id="vaccineFormName" class="form-control" placeholder="Contoh: Vaksin Rabies / Vaksin DHPPi / Vaksin FVRCP" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">No. Batch Vaksin</label>
+              <input type="text" id="vaccineFormBatch" class="form-control" placeholder="Contoh: RB-2025-9921">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Dokter Penanggung Jawab</label>
+              <input type="text" id="vaccineFormDoctor" class="form-control" value="dr. Sari Wijaya, Sp.KH" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Tanggal Diberikan</label>
+              <input type="date" id="vaccineFormAdminDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Jadwal Vaksin Berikutnya <span class="required">*</span></label>
+              <input type="date" id="vaccineFormDueDate" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Status</label>
+            <select id="vaccineFormStatus" class="form-control">
+              <option value="Terjadwal">Terjadwal</option>
+              <option value="Selesai">Selesai</option>
+              <option value="Dibatalkan">Dibatalkan</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Catatan Vaksinasi</label>
+            <textarea id="vaccineFormNotes" class="form-control" placeholder="Catatan reaksi, rekomendasi pengulangan, dll."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-modal-close>Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan Jadwal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Detail Layanan Publik -->
+  <div id="serviceDetailModal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="serviceModalTitle">Detail Layanan</h3>
+        <button class="modal-close" data-modal-close>✕</button>
+      </div>
+      <div class="modal-body" id="serviceModalContent"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-modal-close>Tutup</button>
+        <button type="button" class="btn btn-primary" id="serviceModalCtaBtn">Buat Janji Temu Layanan Ini →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Konfirmasi Aksi (Delete / Logout) -->
+  <div id="confirmActionModal" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Konfirmasi Tindakan</h3>
+        <button class="modal-close" data-modal-close>✕</button>
+      </div>
+      <div class="modal-body">
+        <p id="confirmActionMessage" style="font-size: 0.95rem; color: var(--text-main); line-height: 1.5;"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline btn-sm" data-modal-close>Batal</button>
+        <button type="button" class="btn btn-danger btn-sm" id="confirmActionAcceptBtn">Ya, Lanjutkan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Quick Global Search -->
+  <div id="globalSearchModal" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 600px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 8px; width: 100%;">
+          <span>🔍</span>
+          <input type="text" id="globalSearchInput" placeholder="Ketik kata kunci untuk mencari..." style="width: 100%; border: none; font-size: 1.05rem; outline: none;" oninput="App.handleGlobalSearch(this.value)">
+        </div>
+        <button class="modal-close" data-modal-close>✕</button>
+      </div>
+      <div class="modal-body" id="globalSearchResults" style="max-height: 380px;">
+        <p class="text-muted" style="text-align: center; padding: 20px;">Ketik kata kunci untuk mencari data hewan, dokter, atau rekam medis...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Lupa Password -->
+  <div id="forgotPasswordModal" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 460px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Reset Password</h3>
+        <button class="modal-close" data-modal-close>✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+          Masukkan email atau nomor telepon yang terdaftar pada akun PETCARE Anda.
+        </p>
+        <div class="form-group">
+          <label class="form-label">Email / Nomor HP</label>
+          <input type="text" id="forgotEmailInput" class="form-control" placeholder="nama@email.com">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline btn-sm" data-modal-close>Tutup</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="App.closeAllModals(); App.showToast('Instruksi pemulihan telah dikirimkan ke email Anda.', 'success');">Kirim Tautan Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Admin Konfirmasi Janji Temu -->
+  <div id="adminConfirmApptModal" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Konfirmasi Janji Temu Pasien</h3>
+        <button class="modal-close" data-modal-close>✕</button>
+      </div>
+      <form id="adminConfirmApptForm">
+        <div class="modal-body">
+          <input type="hidden" id="confirmApptId">
+          <div id="confirmModalInfo"></div>
+
+          <div class="form-group">
+            <label class="form-label">Dokter Jaga Penanggung Jawab <span class="required">*</span></label>
+            <select id="confirmApptDoctor" class="form-control" required>
+              <option value="dr. Sari Wijaya, Sp.KH">dr. Sari Wijaya, Sp.KH</option>
+              <option value="dr. Budi Santoso">dr. Budi Santoso</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Ruangan Pemeriksaan <span class="required">*</span></label>
+            <select id="confirmApptRoom" class="form-control" required>
+              <option value="Ruang Periksa 1">Ruang Periksa 1 (Pemeriksaan Umum & Vaksin)</option>
+              <option value="Ruang Periksa 2">Ruang Periksa 2 (Penyakit Dalam)</option>
+              <option value="Ruang Bedah & Steril">Ruang Bedah & Steril</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Catatan Konfirmasi untuk Pemilik Hewan</label>
+            <textarea id="confirmApptNotes" class="form-control" placeholder="Tuliskan catatan konfirmasi atau persiapan khusus sebelum datang..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-modal-close>Batal</button>
+          <button type="submit" class="btn btn-primary">✓ Konfirmasi Jadwal Sekarang</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Admin Jadwal Ulang (Reschedule) -->
+  <div id="adminRescheduleModal" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Jadwal Ulang Kunjungan</h3>
+        <button class="modal-close" data-modal-close>✕</button>
+      </div>
+      <form id="adminRescheduleForm">
+        <div class="modal-body">
+          <input type="hidden" id="rescheduleApptId">
+          <div class="form-group">
+            <label class="form-label">Tanggal Baru <span class="required">*</span></label>
+            <input type="date" id="rescheduleNewDate" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Jam Slot Baru <span class="required">*</span></label>
+            <select id="rescheduleNewTime" class="form-control" required>
+              <option value="09:00">09:00 WIB</option>
+              <option value="10:00">10:00 WIB</option>
+              <option value="11:00">11:00 WIB</option>
+              <option value="13:00">13:00 WIB</option>
+              <option value="14:00">14:00 WIB</option>
+              <option value="15:00">15:00 WIB</option>
+              <option value="16:00">16:00 WIB</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Alasan Penyesuaian Jadwal</label>
+            <textarea id="rescheduleReason" class="form-control" placeholder="Contoh: Dokter bertugas ada tindakan darurat..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-modal-close>Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan Jadwal Baru</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Toast Container -->
+  <div id="toastContainer"></div>
+
+  <!-- Application Scripts -->
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/pets.js"></script>
+  <script src="assets/js/medical-records.js"></script>
+  <script src="assets/js/vaccinations.js"></script>
+  <script src="assets/js/appointments.js"></script>
+  <script src="assets/js/reminders.js"></script>
+  <script src="assets/js/profile.js"></script>
+  <script src="assets/js/public.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
+      PublicModule.init();
+    });
+  </script>
+</body>
+</html>

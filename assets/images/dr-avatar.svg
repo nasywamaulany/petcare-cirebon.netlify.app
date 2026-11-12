@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2"/>
+  <!-- Head -->
+  <circle cx="50" cy="38" r="17" fill="#FED7AA"/>
+  <!-- Hair -->
+  <path d="M33 36 C33 22, 67 22, 67 36 C67 32, 60 25, 50 25 C40 25, 33 32, 33 36 Z" fill="#1E293B"/>
+  <!-- Doctor White Coat -->
+  <path d="M22 86 C22 66, 36 62, 50 62 C64 62, 78 66, 78 86 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <!-- Stethoscope -->
+  <path d="M40 62 C40 74, 60 74, 60 62" fill="none" stroke="#0284C7" stroke-width="3"/>
+  <circle cx="50" cy="74" r="4" fill="#0284C7"/>
+  <!-- Inner shirt -->
+  <polygon points="46,62 50,70 54,62" fill="#0284C7"/>
+</svg>
